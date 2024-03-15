@@ -3,13 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "link":"yarn --global unlink ts_cli && yarn --global link",
+    "dev": "tsc -w",
+    "cli":"./dist/index.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@antfu/ni": "^0.21.4",
+    "chalk": "5.2.0",
+    "commander": "^10.0.0",
+    "execa": "^7.0.0",
+    "ora": "^6.1.2"
+  },
   "devDependencies": {
+    "@types/node": "^20.11.28",
     "typescript": "^5.4.2"
   }
 }
